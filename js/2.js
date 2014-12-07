@@ -2,27 +2,27 @@
 * @Author: ben_cripps
 * @Date:   2014-12-05 19:05:15
 * @Last Modified by:   ben_cripps
-* @Last Modified time: 2014-12-05 19:31:23
+* @Last Modified time: 2014-12-07 09:41:58
 */
 
 'use strict';
 
-var tot = 0;
+function getFib(p, n) {
 
-var fib = function( p, n ) {
+    var tot = 0; 
 
-	if (n % 2 === 0) {
-		tot+= n;
-	}
+    function fib(p, n) {
 
-	if (n < 40000000) {
-		fib( n || 1, n + p);
-	}
+    	if (n % 2 === 0) {
+    		tot+= n;
+    	}
+    	if (n < 40000000) {
+    		fib( n || 1, n + p);
+    	}
+    }
 
-	else {
-		console.log(tot);
-	}
+    fib(p,n);
+    return tot;
+}    
 
-}
-
-fib(0, 1);
+console.log( getFib(0, 1) );
