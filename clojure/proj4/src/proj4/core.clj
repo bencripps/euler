@@ -9,9 +9,11 @@
         Long/parseLong
         (= num)))
 
-(defn products [x y]
-    (cons (* x y) (lazy-seq (products x (dec y)))))
+(def all-products 
+  (for [x (range 100 1000)
+        y (range 100 1000)]
+  (* x y)))
 
-(defn -main []
+(defn -main [& args]
   "Euler Problem 4"
-  (println (first (filter palindrome? (products 999 999)))))
+  (println (apply max (filter palindrome? all-products))))
