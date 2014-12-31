@@ -21,7 +21,7 @@
      (->> 
         euler-string
         char-strings
-        (map str-to-int)
+        (map str-to-product)
         (apply max)
         println))
     
