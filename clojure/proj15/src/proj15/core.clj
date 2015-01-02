@@ -1,9 +1,6 @@
 (ns proj15.core
   (:gen-class))
 
-(defn square [n]
-    (* n n))
-
 (defn factorial [n]
     (apply * (range (bigint 1) (inc n))))
 
