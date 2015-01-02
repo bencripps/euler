@@ -6,11 +6,11 @@
         (/ n 2)
         (inc (* 3 n))))
 
-(defn collatz-sequence [n]
+(defn collatz-sequence-length [n]
     (loop [origin n
            times 0
            number n]
-        (if (or (= 1 number) (zero? number))
+        (if (#{0 1} number)
             [origin times]
             (recur origin (inc times) (get-next number)))))
 
@@ -18,6 +18,7 @@
     "Euler Project 14"
     (->>
         (range 1000000)
-        (map collatz-sequence)
+        (map collatz-sequence-length)
         (apply max-key second)
+        first 
         println))
