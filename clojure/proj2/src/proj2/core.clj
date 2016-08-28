@@ -1,12 +1,11 @@
 (ns proj2.core
   (:gen-class))
 
-(defn fib [x y l hsh]
-    (let [next-value (+ x y)
-          updated-hash (conj hsh next-value)]
+(defn fib [x y l old-hash]
+    (let [next-value (+ x y)]
     (if (< x l)
-        (fib next-value x l updated-hash)
-        updated-hash)))
+        (fib next-value x l (conj old-hash next-value))
+        old-hash)))
 
 (defn -main
   "Euler problem 2"
