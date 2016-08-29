@@ -1,0 +1,18 @@
+{
+  "name": "js-solutions",
+  "version": "1.0.0",
+  "description": "js euler solutions",
+  "scripts": {
+    "start": "babel-node",
+    "dist": "babel ./src --out-dir dist"
+  },
+  "author": "Benjamin cripps <ben_cripps@volusion.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-eslint": "^6.1.2",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-watch": "^2.0.2"
+  }
+}
