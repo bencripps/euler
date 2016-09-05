@@ -14,6 +14,7 @@ var func = function func(max) {
     var generator = (0, _fib2.default)();
     var curr = 0;
     var sum = 0;
+
     while (curr < max) {
         curr = generator.next().value;
 
