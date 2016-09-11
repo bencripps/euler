@@ -13,4 +13,21 @@ var factors = exports.factors = function factors(n) {
     return ret;
 };
 
+var numberOfDivisors = exports.numberOfDivisors = function numberOfDivisors(n) {
+    var SQRT = Math.sqrt(n);
+    var num = 0;
+
+    for (var i = 1; i <= SQRT; i++) {
+        if (n % i === 0) {
+            num += 2;
+        }
+    }
+
+    if (SQRT * SQRT === n) {
+        num--;
+    }
+
+    return num;
+};
+
 exports.default = factors;
